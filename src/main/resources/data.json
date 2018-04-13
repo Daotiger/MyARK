@@ -2,7 +2,7 @@
     "CREATURES": {
         "achatina": {
             "id": "achatina",
-            "name": "TEST",
+            "name": "Achatina(玛瑙螺)",
             "img": 1,
             "a0": 4000,
             "aI": 150,
