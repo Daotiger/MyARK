@@ -5,6 +5,9 @@
 
 	<groupId>com.daotiger</groupId>
 	<artifactId>ark</artifactId>
+	
+	<version>0.0.1</version>
+	<packaging>war</packaging>
 
 	<name>MyARK</name>
 	<description>ark project for Spring Boot</description>
@@ -24,24 +27,34 @@
 	<dependencies>
 	
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+		
+		<dependency>
+			<!-- To build an executable war use one of the profiles below -->
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
+			<scope>provided</scope>
 		</dependency>
 		
+		<!-- Test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		
-		
 		
 	</dependencies>
 
@@ -54,6 +67,4 @@
 		</plugins>
 	</build>
 
-
-	<version>0.0.1</version>
 </project>

@@ -24,7 +24,7 @@ public class DataController {
 	@Value(value="classpath:data.json")
 	private  Resource resource;
 
-	@RequestMapping("/api/data")
+	@RequestMapping(value="/api/data" ,produces="text/plain;charset=UTF-8")
 	@ResponseBody
 	public String index() {
 		logger.info("kaishi");
@@ -37,7 +37,7 @@ public class DataController {
 		BufferedReader br;
 		StringBuffer message = new StringBuffer();
 		try {
-			br = new BufferedReader(new InputStreamReader(resource.getInputStream()));
+			br = new BufferedReader(new InputStreamReader(resource.getInputStream(),"UTF-8"));
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				message.append(line);
